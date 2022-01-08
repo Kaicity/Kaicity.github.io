@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Đăng ký</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main2.css'>
+</head>
+<body>
+    <main>
+        <script>
+            function notifi() {
+             var p0 = document.getElementById("phone").value;
+             var p1 = document.getElementById("user").value;
+             var p2 = document.getElementById("pass").value;
+             var p3 = document.getElementById("passlate").value;
+ 
+             if(p0 == "") {
+                  alert("Bạn chưa nhập số điện thoại !");
+                  return false;
+                }
+             if(p1 == "") {
+                 alert("Bạn chưa nhập tên đăng nhập");
+                 return false;
+                }
+             if(p2 == "") {
+                 alert("Bạn chưa nhập mật khẩu!");
+                 return false;
+                }
+             if (p3 != p2){
+                 alert("Mật khẩu không trùng khớp");
+                 return false;
+             }
+              alert("Hoàn tất đăng ký !")
+              return true;
+            }
+      </script>
+        <div class="container">
+            <div class="register-form">
+                <form action="" method="post" onsubmit="return notifi()">
+                    <h1>Phiếu đánh giá - phản hồi</h1>
+                    <div class="input-box">
+
+                        <input type="text" placeholder="Họ và tên"  required="">
+                    </div>
+                    <div class="input-box">
+
+                        <input type="text" placeholder="Tên đăng nhập"  id = "user">
+                    </div>
+                    <div class="input-box">
+
+                        <input type="password" placeholder="Nhập mật khẩu"  id="pass">
+                    </div>
+                    <div class="input-box">
+
+                        <input type="password" placeholder="Nhập lại mật khẩu"  id="passlate">
+                    </div>
+                    <div class="input-box">
+
+                        <input type="text" placeholder="Địa chỉ" required="">
+                    </div>
+                    <div class="input-box">
+
+                        <input type="text" placeholder="Số điện thoại" id = "phone">
+                    </div>
+                    <div class="input-box">
+                        <div class="col-6">
+                            <label for="ngaysinh">Ngày sinh</label>
+                            <br>
+                            <input type="date" id="ngaysinh"  required =""/>
+                        </div>
+                        <div class="col-6">
+                            <label for="gioitinh">Giới tính</label>
+                            <br>
+                            <select id="gioitinh" required ="">
+                                <option value="nam">Nam</option>
+                                <option value="nu">Nữ</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-6">
+                            <label for="gioitinh">Chuyên mục đánh giá</label>
+                            <br>
+                            <select id="gioitinh" required ="">
+                                <option value="ta1">Về hương vị của món ăn</option>
+                                <option value="ta2">Phong cách phục vụ của nhân viên tại cửa hàng</option>
+                                <option value="ta3">Vấn đề thanh toán/đặt mua hàng</option>
+                                <option value="ta4">Về không gian cửa hàng/bàn ghế</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="input-box">
+                        <label for="gioithieu">Ý kiến phản hồi khách hàng</label>
+                        <br>
+                        <textarea id="gioithieu"></textarea>
+                    </div>
+                    <div class = "input-box">
+                        Ảnh đính kèm<br>
+                        <input type = "file" name = "Avarta">
+                    </div>
+                    <div class="input-box">
+                        <label for="gioithieu"><b>Tôi đồng ý gửi phản hồi</b></label>
+                        <input type="checkbox" id="accept" required = "xác nhận">
+                    </div>
+                    <div class="btn-box">
+                        <button type="submit" onsubmit="return notifiContent()">
+                            Gửi đi
+                        </button>
+                        <button type="reset">
+                            Làm mới 
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

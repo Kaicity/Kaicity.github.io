@@ -1,0 +1,107 @@
+* {
+    margin: 0;
+    padding: 0;
+    }
+    body {
+    background: rosybrown;
+    }
+    .actionForm {
+    max-width: 600px;
+    margin: 0 auto;
+    display: block;
+    margin-top: 50px;
+    border: 2px solid rgb(99, 95, 95);
+    border-radius: 8px;
+    width: 300px;
+    padding: 90px;
+    height: 370px;
+    background-color: white;
+    
+    
+    }
+
+    .actionForm input[type="text"],
+    .actionForm input[type="password"]
+    {
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    width: 100%;
+    font-size: 18px;
+    }
+    .actionForm input[type="text"]{
+      margin-right: 20px;
+      padding: auto;
+      
+    }
+    .actionForm button[type="submit"] {
+    padding: 15px;
+    background: #00baff;
+    color: white;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    font-size: 20px;
+    }
+   
+    .actionForm button[type="submit"]:hover{
+      color: black;
+    }
+
+    a.a1{
+        text-decoration: none;
+        color: rgb(73, 54, 248);
+    }
+  a.a1:hover{
+      text-decoration-line: underline;
+      color: red;
+  }
+  h3{
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 26px;
+      color:rgb(87, 83, 83)
+  }
+  h3.ttk12{
+    text-align: center;
+  }
+  a.a2{
+    text-decoration: none;
+    color: white;
+   
+}
+a.a2:hover{
+ 
+  color: black;
+}
+
+a.taotk{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-decoration: none;
+  color: rgb(39, 39, 224);
+
+}
+div.taotk1{
+  margin: auto;
+}
+a.taotk:hover{
+  color: blue;
+  text-decoration: underline;
+}
+div.ttk{
+  display: flex;
+  margin-right: 20px;
+  padding-bottom: 18px;
+
+
+}
+
+button{
+  width: 335px;
+
+}
+
+h4{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  color:rgb(49, 47, 47);
+}

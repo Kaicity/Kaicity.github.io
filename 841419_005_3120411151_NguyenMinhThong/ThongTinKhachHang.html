@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Thông tin khách hàng</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='mainSignIn.css'>
+</head>
+<body>
+    <h1>ĐẾM NGƯỢC THỜI GIANG ĐẾN TẾT NHẬN SIÊU ƯU ĐÃI 50%</h1>
+    <div id="clockdiv">
+        <div>
+        <span class="days"></span>
+        <div class="smalltext">Ngày</div>
+      </div>
+      <div>
+        <span class="hours"></span>
+        <div class="smalltext">Giờ</div>
+      </div>
+      <div>
+        <span class="minutes"></span>
+        <div class="smalltext">Phút</div>
+      </div>
+      <div>
+        <span class="seconds"></span>
+        <div class="smalltext">Giây</div>
+      </div>
+    </div>
+    <script src="mainClock.js"></script>
+    <style>
+    body{
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        font-family: sans-serif;
+        background-color: rosybrown;
+        min-height: 100vh;
+        font-family: 'Rubik', sans-serif;
+    }
+    
+    h1{
+      color: red;
+      font-weight: 100;
+      font-size: 40px;
+      margin: 40px 0px 20px;
+    }
+    
+    #clockdiv{
+        font-family: sans-serif;
+        color: #fff;
+        display: inline-block;
+        font-weight: 100;
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    #clockdiv > div{
+        padding: 10px;
+        border-radius: 3px;
+        background: red;
+        display: inline-block;
+    }
+    
+    #clockdiv div > span{
+        padding: 15px;
+        border-radius: 3px;
+        background: #873335;
+        display: inline-block;
+    }
+    
+    .smalltext{
+        padding-top: 5px;
+        font-size: 16px;
+    }
+    </style>
+   <br>
+   <br>
+   <hr>
+        <div class="container">
+            <div class="register-form">
+                <form action="" method="post" onsubmit="return notifi()">
+                    <h1>Đánh giá - phản hồi</h1>
+                    <div class="input-box">
+
+                        <input type="text" placeholder="Họ và tên"  required="">
+                    </div>
+                    <div class="input-box">
+
+                        <input type="text" placeholder="Tên đăng nhập"  id = "user">
+                    </div>
+                    <div class="input-box">
+
+                        <input type="password" placeholder="Nhập mật khẩu"  id="pass">
+                    </div>
+                    <div class="input-box">
+
+                        <input type="password" placeholder="Nhập lại mật khẩu"  id="passlate">
+                    </div>
+                    <div class="input-box">
+
+                        <input type="text" placeholder="Địa chỉ" required="">
+                    </div>
+                    <div class="input-box">
+
+                        <input type="text" placeholder="Số điện thoại" id = "phone">
+                    </div>
+                    <div class="input-box">
+                        <div class="col-6">
+                            <label for="ngaysinh">Ngày sinh</label>
+                            <br>
+                            <input type="date" id="ngaysinh"  required =""/>
+                        </div>
+                        <div class="col-6">
+                            <label for="gioitinh">Giới tính</label>
+                            <br>
+                            <select id="gioitinh" required ="">
+                                <option value="nam">Nam</option>
+                                <option value="nu">Nữ</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="col-6">
+                            <label for="gioitinh">Chuyên mục đánh giá</label>
+                            <br>
+                            <select id="gioitinh" required ="">
+                                <option value="ta1">Về hương vị của món ăn</option>
+                                <option value="ta2">Phong cách phục vụ của nhân viên tại cửa hàng</option>
+                                <option value="ta3">Vấn đề thanh toán/đặt mua hàng</option>
+                                <option value="ta4">Về không gian cửa hàng/bàn ghế</option>
+                            </select>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="input-box">
+                        <label for="gioithieu">Ý kiến phản hồi khách hàng</label>
+                        <br>
+                        <textarea id="gioithieu"></textarea>
+                    </div>
+                    <div class = "input-box">
+                        Ảnh đính kèm<br>
+                        <input type = "file" name = "Avarta">
+                    </div>
+                    <div class="input-box">
+                        <label for="gioithieu"><b>Tôi đồng ý gửi phản hồi</b></label>
+                        <input type="checkbox" id="accept" required = "xác nhận">
+                    </div>
+                    <div class="btn-box">
+                        <button type="submit" onsubmit="return notifiContent()">
+                            Gửi đi
+                        </button>
+                        <button type="reset">
+                            Làm mới 
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,526 @@
+:root{
+    --color1 : #ff7c28!important;; /* Mau chu dao */
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.d-flex{   /* Logo */
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: block;
+    top: 5px;
+    left: 60px;
+}
+header{
+    width: 101vw;
+    height: 15vh;
+    background : var(--color1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    text-align: center;    /* canh giua 1 2 3 */
+    justify-content: center;
+    align-items: center;
+}
+header::before { /* chinh phong nen anh */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    background: rgba(0, 0, 0, 0.5);
+}
+header input {  
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    opacity: 0;  /* lam mo */
+    z-index: 2;
+    cursor: pointer;
+    position: fixed;
+}
+header input:checked ~ .menu-icon .menu-line::before {
+    transform: rotate(90deg);
+    top : 0;
+}
+header input:checked ~ .menu-icon .menu-line::after {
+    transform: rotate(90deg);
+    top : 0;
+}
+header input:checked ~ .menu-icon .menu-line {
+    transform: rotate(135deg);
+    transition: 3s;
+}
+header input:checked ~.menu-item {
+    right: 0;
+}
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    opacity: 1;
+    z-index: 1;
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-line {
+    height: 4px;
+    width: 100%;
+    background: black;
+    position: relative;
+}
+.menu-line::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top : 10px;
+    background: black;
+}
+.menu-line::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom : 10px;
+    background: black;
+}
+.menu-item {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top : 0;
+    right: -100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    z-index: 10;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.menu-item li {
+    line-height: 40px;
+}
+.menu-item li a {
+    color: var(--color1);
+    font-size: 15px;
+}
+.menu-item p {
+    color: var(--color1);
+}
+.menu-order {
+    width: 100vw;
+    height: 70vh;
+    background : url("yellow.jpg");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    display: block;
+    text-align: center;   
+    justify-content: center;
+    align-items: center;
+}
+
+/* Login - sign up */
+.menu-item p {
+    color: var(--color1);
+}
+.account a {
+    padding: 0 17px;
+    line-height: var(--headheight);
+} 
+
+.account .login {
+    background-color: var(--color1);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 100px;
+    position: relative;
+    margin-left: 1000px;
+}
+.account .login:hover {
+    background: transparent;
+    color: var(--color1);
+    outline: solid var(--color1);
+    outline-width: 1px;
+    /* border: 1px solid #00baff; */
+    box-sizing: inherit;
+}
+.account .sign-up {
+    background-color: #00baff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 100px;
+    position: relative;
+}
+
+.account .sign-up:hover {
+    background: transparent;
+    color: #00baff;
+    outline: solid #00baff;
+    outline-width: 1px;
+    /* border: 1px solid #00baff; */
+    box-sizing: inherit;
+}
+
+
+
+.intro {
+    position: absolute;
+    left: 0px;
+    width: 400px;
+    padding: 10px;
+}
+.intro p {
+    font-size: 20px;
+    color: black;
+   margin-left: 10px;
+   text-align: left;
+}
+.img-intro img {
+    width: 850px;
+    height: 420px;
+    position: absolute;
+    margin-left: -200px;
+}
+.container{
+    display: grid;
+    margin-left: 100px;
+}
+.text-menu h1 {
+    font-size: 30px;
+    color: var(--color1);
+    text-align: center;
+}
+
+
+/* THOI TRANG TONG 1 */
+div.thoitrangtong1{
+    display: flex;
+    margin-bottom: 30px;
+    
+}
+.giuadonam1 h2 {
+    margin-left: 10px;
+    color: var(--color1);
+}
+img.thoitrangnam{
+   margin-left: 20px;
+   margin-right: 35px;
+}
+img.tt1-1{
+    margin-bottom: 10px;
+   
+    transform: scale(1);
+    transition: all 0.5s;
+}
+img.tt1-1:hover{
+ transform: scale(1.1);
+}
+
+div.thoitrangnamtong{
+ text-align: center;
+}
+
+
+div.thoitrang1{
+    width: 300px;
+    margin-right: 35px;
+    
+}
+p.tt1{
+ text-align: center;
+  margin-bottom: 10px;
+  font-size: 16px;
+  padding:8px;
+  transform: scale(1);
+  transition: all 0.5s;
+  
+}
+p.tt1:hover{
+  color: #00baff;
+  outline: 1px solid #00baff;
+  border-radius: 100px;
+  background-color: #fffbfb;
+  transform: scale(1.1);
+  
+
+}
+p.tt2{
+ text-align: center;
+  font-size: 16px;
+}
+/* THỜI TRANG DÒNG 2  */
+
+h2.tg40{
+   text-align: center;
+   font-size: 40px;
+ font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ margin-bottom: 60px;
+}
+
+div.thoitrangdong2{
+   display: flex;
+   margin-left: 20px;
+   
+}
+ /* THOI TRANG DONG 3 TRANG CHINH */
+ div.thoitrangdong3{
+     display: flex;
+     margin-left: 20px;
+     padding-bottom: 70px;
+    margin-top: 30px;
+     
+ }   
+
+/* trang giua 5 */
+img.logo3{
+    width: 551px;
+    height: 501px;
+    margin-left: 90px;
+    border-radius: 20px ;
+
+    -webkit-transition:all 0.5s ease-out;
+    -moz-transition:all 0.5s ease-out;
+    -ms-transition:all 0.5s ease-out;
+    -o-transition:all 0.5s ease-out;
+    transition:all 0.5s ease-out;
+}
+img.logo3:hover{
+ -webkit-transform:rotate(3deg);
+ -moz-transform:rotate(3deg);
+ -ms-transform:rotate(3deg);
+ -o-transform:rotate(3deg);
+ transform:rotate(3deg);
+}
+
+div.tranggiua5tong{
+    display: flex;
+    list-style: none;
+    background-color: #f5f3f3;
+    padding: 50px;
+    margin-bottom: 20px;
+    
+    
+}
+div.tranggiua5-2{
+    text-align: center;
+    padding-left: 80px; 
+    padding-top: 20px;
+}
+li.tg50{
+    font-size: 20px;
+    color: #838080;
+}
+li.tg51{
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding-bottom: 50px;
+    border-bottom: 1px solid gray;
+  
+}
+a.th51{
+ color:rgb(83, 83, 83);  
+}
+li.tg52{
+    
+    width: 420px;
+    font-size: 17px;
+    color: #838080;
+   margin-left: 50px;
+   padding-bottom: 50px;   
+}
+a.tg55{
+    outline: 1px solid #00baff;
+    padding: 20px 70px 20px 70px;
+    border-radius: 100px;
+    background-color: #00baff;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    
+ 
+}
+a.tg55:hover{
+ color: #00baff;
+ background-color: white;
+ transition: 1s;
+ font-size: 24px;
+}
+
+
+/* trang giua 6 */
+div.tranggiua6tong{
+    display: flex;
+   
+}
+div.tranggiua6-1{
+   
+  
+    display: block;
+ }
+ 
+ 
+
+img.tranggiua6-1-2{
+ opacity: 1;
+        
+ } 
+ img.tranggiua6-1-2:hover{
+     opacity: 0.5;
+     transition: 0.3s;
+ }
+
+ 
+         /* trang giua 7 */
+
+     div.tranggiua7tong{
+         background-color: #f3f3f3;
+         padding: 120px;
+        
+         margin-top: 80px;
+         margin-bottom: 80px;
+       
+     }   
+     div.tranggiua7nho{
+         text-align: center;
+     } 
+
+     p.tg7-1{
+         font-size: 25px;
+         margin-bottom: 10px;
+         color: #838080;
+     }
+     h2.tg7-2{
+         font-size: 30px;
+         color: rgb(49, 48, 48);
+     }
+
+     p.tg7-3{
+         font-size: 20px;
+         width: 700px;
+         margin: auto;
+         color: #838080;
+     }
+   /*chuyen trang*/
+   
+   div.trang6-6{
+    margin-left: 630px;
+    margin-bottom: 80px;
+     }
+
+     div.trang6-7{
+         display: flex;
+         margin: auto;
+     }
+     a.trang6-8{
+         padding: 10px;
+     }
+     div.chantrangtonglon{
+        background-color: beige;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        right: 0;
+        left: 0;
+        bottom: 0;
+    }
+    div.chantrangtong{
+    display: flex;
+    padding-bottom: 30px;
+    text-decoration: none;
+    ;
+    
+    }
+    ul.chantrang1-1{
+    list-style: none;
+    margin-right: 80px;
+    margin-left: 80px;
+    
+    }
+    
+    h4.chantrang1-1-1{
+    text-align: center;
+    
+    }
+    li{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    }
+    
+    a{
+    text-decoration: none;
+    color: #000;
+    }
+    a:hover{
+    color:red ;
+    }
+    div.chantrang2
+    {
+    padding-left: 10px;       
+    }
+    
+    b{
+    color: black;
+    }
+    
+    div.khoanggiua{
+    border: 1px solid grey;
+    margin-left: 80px;
+    margin-right: 260px;
+    }
+    
+    div.chantrangtong2{
+    display: flex;
+    padding-top: 20px;
+    
+    }
+    div.chantrang2-2{
+    
+    margin-left: 100px;
+    margin-right: 80px;
+    
+    
+    }
+    ul.chantrang2-1{
+    list-style: none;
+    }
+    img.ha1{
+        width: 40px;
+        height: 40px;
+        margin-top: 10px;
+    }
+    img.ha2{
+        margin-right: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .footerLogo{
+        margin-left: 50px;
+        margin-top: -120px;
+    }
+    

@@ -1,0 +1,326 @@
+:root{
+    --color1 : #ff7c28!important;; /* Mau chu dao */
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.d-flex{   /* Logo */
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    display: block;
+    top: 5px;
+    left: 60px;
+}
+header{
+    width: 100vw;
+    height: 15vh;
+    background : var(--color1);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    text-align: center;    /* canh giua 1 2 3 */
+    justify-content: center;
+    align-items: center;
+}
+header::before { /* chinh phong nen anh */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    background: rgba(0, 0, 0, 0.3);
+}
+header input {  
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    opacity: 0;  /* lam mo */
+    z-index: 2;
+    cursor: pointer;
+    position: fixed;
+}
+header input:checked ~ .menu-icon .menu-line::before {
+    transform: rotate(90deg);
+    top : 0;
+}
+header input:checked ~ .menu-icon .menu-line::after {
+    transform: rotate(90deg);
+    top : 0;
+}
+header input:checked ~ .menu-icon .menu-line {
+    transform: rotate(135deg);
+    transition: 3s;
+}
+header input:checked ~.menu-item {
+    right: 0;
+}
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    opacity: 1;
+    z-index: 1;
+    cursor: pointer;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.menu-line {
+    height: 4px;
+    width: 100%;
+    background: black;
+    position: relative;
+}
+.menu-line::before {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top : 10px;
+    background: black;
+}
+.menu-line::after {
+    content: "";
+    display: block;
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom : 10px;
+    background: black;
+}
+.menu-item {
+    width: 200px;
+    height: 100vh;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top : 0;
+    right: -100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    z-index: 10;
+    flex-direction: column;
+    transition: 0.5s;
+}
+.menu-item li {
+    line-height: 40px;
+}
+.menu-item li b a{
+    color: var(--color1);
+    font-size: 15px;
+}
+.menu-item p {
+    color: var(--color1);
+}
+/* Login - sign up */
+.menu-item p {
+    color: var(--color1);
+}
+.account a {
+    padding: 0 17px;
+    line-height: var(--headheight);
+} 
+
+.account .login {
+    background-color: var(--color1);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 100px;
+    position: relative;
+    margin-left: 1000px;
+}
+
+
+.account .login:hover {
+    background: transparent;
+    color: var(--color1);
+    outline: solid var(--color1);
+    outline-width: 1px;
+    /* border: 1px solid #00baff; */
+    box-sizing: inherit;
+}
+
+.account .sign-up {
+    background-color: #00baff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 100px;
+    position: relative;
+}
+
+.account .sign-up:hover {
+    background: transparent;
+    color: #00baff;
+    outline: solid #00baff;
+    outline-width: 1px;
+    /* border: 1px solid #00baff; */
+    box-sizing: inherit;
+}
+
+
+.form-pro {
+    width: 100vw;
+    height: 200vh;
+    background: url("261173387_1397585797340003_934286092224603124_n.png"); /* Anh nen trang chu */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    text-align: center;    /* canh giua 1 2 3 */
+    justify-content: center;
+    align-items: center;
+}
+.text-pro {
+    font-size: 50px;
+    color: red;
+    margin-top: -200px;
+}
+.input-pro {
+    border: 10px;
+    padding: 15px;
+    background: red;
+    color: white;
+    border-radius: 25px;
+    font-size: 25px;
+    position: absolute;
+    opacity: 0.5;
+    margin-top: -50px;
+}
+.pro-img1 img {
+    width: 700px;
+    height: 400px;
+    position: absolute;
+    margin-top: -550px;
+    margin-left: 10px;
+}
+.input-pro :hover{
+    border :10px;
+    color: red;
+}
+/* thong tin khuyen mai */
+    div.saletong{
+      margin-left: -250px;
+      margin-bottom: -400px;
+      padding-top: 50px;
+      position: absolute;
+      text-align: left;
+     }
+     div.sale2{
+     margin-left: 6px;
+     width: 800px;
+    }
+    ul.sale2-2{
+     list-style: none;
+     font-size: 30px;
+     border-top: 1px solid grey;
+    }
+    ul.sale2-21{
+     list-style: none;
+     font-size: 30px;
+    }
+    .sale2-3{
+        font-size: 20px;
+    }
+div.chantrangtonglon{
+    background-color: beige;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+div.chantrangtong{
+display: flex;
+padding-bottom: 30px;
+text-decoration: none;
+;
+
+}
+ul.chantrang1-1{
+list-style: none;
+margin-right: 80px;
+margin-left: 80px;
+
+}
+
+h4.chantrang1-1-1{
+text-align: center;
+
+}
+li{
+margin-top: 10px;
+margin-bottom: 10px;
+font-size: 14px;
+}
+
+a{
+text-decoration: none;
+color: #000;
+}
+a:hover{
+color:red ;
+}
+div.chantrang2
+{
+padding-left: 10px;       
+}
+
+b{
+color: black;
+}
+
+div.khoanggiua{
+border: 1px solid grey;
+margin-left: 80px;
+margin-right: 260px;
+}
+
+div.chantrangtong2{
+display: flex;
+padding-top: 20px;
+
+}
+div.chantrang2-2{
+
+margin-left: 100px;
+margin-right: 80px;
+
+
+}
+ul.chantrang2-1{
+list-style: none;
+}
+img.ha1{
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+img.ha2{
+    margin-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.footerLogo{
+    margin-left: 50px;
+    margin-top: -120px;
+}
